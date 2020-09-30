@@ -12,6 +12,7 @@ RUN apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender1 libfontconfig1 i
 RUN apt-get install -y zsh vim
 RUN git clone https://github.com/8uos/zsh_vim.git
 RUN cd zsh_vim
+RUN ls
 RUN bash git_config.sh
 RUN bash vim_config.sh
 RUN bash zsh_config.sh
