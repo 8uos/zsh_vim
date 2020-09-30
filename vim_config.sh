@@ -1,4 +1,5 @@
 #!/bin/bash
+DIR="$( cd "$( dirname "$0" )" && pwd )"
 if [ ! -d "$HOME/.vim" ]; then
   mkdir $HOME/.vim
 fi
@@ -8,8 +9,8 @@ if [ ! -d "$HOME/.vim/bundle" ]; then
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 
-mv $HOME/.vimrc $HOME/.vimrc.old
-cp vimrc $HOME/.vimrc
+rm $HOME/.vimrc
+cp $DIR/vimrc $HOME/.vimrc
 vim +PluginInstall +qall
 
 ln -s $HOME/.vim $HOME/.config/nvim

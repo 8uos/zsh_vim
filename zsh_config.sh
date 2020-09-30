@@ -1,10 +1,10 @@
 #!/bin/bash
-
+DIR="$( cd "$( dirname "$0" )" && pwd )"
 echo "installing oh-my-zsh..."
 if [ ! -f "$HOME/.oh-my-zsh/oh-my-zsh.sh" ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    mv ~/.zshrc ~/.zshrc.old
-    cp ./zshrc ~/.zshrc
+    mv $HOME/.zshrc $HOME/.zshrc.old
+    cp $DIR/zshrc $HOME/.zshrc
 else
     echo "Skip oh-my-zsh install"
 fi

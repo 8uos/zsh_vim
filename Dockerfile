@@ -10,12 +10,10 @@ RUN apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender1 libfontconfig1 i
 
 # setting for zsh and vim (sanghyuk.c)
 RUN apt-get install -y zsh vim
-RUN git clone https://github.com/8uos/zsh_vim.git
-RUN cd zsh_vim
-RUN bash git_config.sh
-RUN bash vim_config.sh
-RUN bash zsh_config.sh
-RUN rm -r zsh_vim
+RUN git clone https://github.com/8uos/zsh_vim.git /zsh_vim
+RUN bash /zsh_vim/vim_config.sh
+RUN bash /zsh_vim/zsh_config.sh
+RUN rm -r /zsh_vim
 
 # Install Miniconda
 RUN curl -so /miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
