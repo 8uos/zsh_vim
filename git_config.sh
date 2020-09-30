@@ -5,8 +5,8 @@ else
     flag='global'
 fi
 
-# git config --$flag user.name SanghyukChun
-# git config --$flag user.email "sanghyuk.chun@gmail.com"
+git config --$flag user.name 8uos
+git config --$flag user.email "song.pxxk@gmail.com"
 git config --$flag color.branch auto
 git config --$flag color.diff auto
 git config --$flag color.interactive auto

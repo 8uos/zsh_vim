@@ -1,3 +1,0 @@
-cask_args appdir: '/Applications'
-tap 'homebrew/cask'
-cask 'basictex'
