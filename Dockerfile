@@ -9,11 +9,11 @@ RUN apt-get install -y apt-utils git curl ca-certificates bzip2 cmake tree htop 
 RUN apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender1 libfontconfig1 iputils-ping 
 
 # setting for zsh and vim (sanghyuk.c)
-RUN apt-get install -y zsh vim
-RUN git clone https://github.com/8uos/zsh_vim.git /zsh_vim
-RUN bash /zsh_vim/vim_config.sh
-RUN bash /zsh_vim/zsh_config.sh
-RUN rm -r /zsh_vim
+RUN apt-get install -y zsh vim \
+&& git clone https://github.com/8uos/zsh_vim.git /zsh_vim \
+&& bash /zsh_vim/vim_config.sh \
+&& bash /zsh_vim/zsh_config.sh \
+&& rm -r /zsh_vim
 
 # Install Miniconda
 RUN curl -so /miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
@@ -37,10 +37,9 @@ ENV NVIDIA_DRIVER_CAPABILITIES compute,video,utility
 ENV TERM xterm-256color
 
 RUN conda update -n base -c defaults conda
-RUN conda install -y ipython numpy pandas matplotlib tqdm pyyaml scipy cython
-RUN pip install psutil requests ninja yacs opencv-python sklearn scikit-image
-RUN pip install ffmpeg imageio-ffmpeg dill
-RUN pip install sphinx recommonmark easydict
+RUN conda install -y ipython numpy pandas matplotlib tqdm pyyaml scipy cython jupyterlab
+RUN pip install psutil requests ninja yacs opencv-python sklearn scikit-image fire lmdb sconf
+RUN pip install ffmpeg imageio-ffmpeg easydict
 
 # Install PyTorch
 RUN conda install pytorch torchvision cudatoolkit=10.0 -c pytorch \
@@ -48,18 +47,11 @@ RUN conda install pytorch torchvision cudatoolkit=10.0 -c pytorch \
 # Downgrade pillow for torchvision
 RUN pip install Pillow==6.1.0
 
-# Dab adding
-# RUN pip install torchsummary
-# RUN pip install tensorboard
-
-# Install tensorflow 1.15.2 and keras-tuner for Tunix
-# RUN pip install tensorflow-gpu==1.15.2 keras-tuner
-
 ENV PYTHONPATH=/workspace
 ENV LC_ALL=C.UTF-8
 # Dab adding
 ENV LANG=C.UTF-8
 ENV LANGUAGE=C.UTF-8
 
-WORKDIR /workspace
-RUN chmod -R a+w /workspace
+WORKDIR /home
+RUN chmod -R a+w /home

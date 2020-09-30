@@ -109,11 +109,5 @@ export TMOUT=0
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# decomment if you want to use neovim as the default
-# alias vim="nvim"
-# alias vi="nvim"
-# alias vimdiff="nvim -d"
-
-# Use $HOME/env as the default environment
-source $HOME/env/bin/activate
-PYLINTRC=$HOME/.pylintrc
+export PATH=/usr/local/cuda/bin:${PATH}
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH}
