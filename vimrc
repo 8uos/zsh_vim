@@ -44,7 +44,7 @@ syntax on
 set background=dark
 " colorscheme Tomorrow-Night
 " colorscheme minimalist
-colorscheme PaperColor
+" colorscheme PaperColor
 
 " --- NERDTree Tabs Setting ----------------------------------------------------------------"
 " NERDTree auto open

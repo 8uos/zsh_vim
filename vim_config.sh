@@ -9,7 +9,9 @@ if [ ! -d "$HOME/.vim/bundle" ]; then
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 
-rm $HOME/.vimrc
+if [ -d "$HOME/.vimrc" ]; then
+  mv $HOME/.vimrc $HOME/.vimrc.old
+fi
+
 cp $DIR/vimrc $HOME/.vimrc
 vim +PluginInstall +qall
-
