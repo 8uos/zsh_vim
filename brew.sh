@@ -7,3 +7,5 @@ if test ! $(which brew); then
 else
     echo "brew is found in this system. Skip brew install"
 fi
+
+brew cask install iterm2
