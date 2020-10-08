@@ -93,10 +93,10 @@ let g:jedi#use_splits_not_buffers = 'top'
 " ------------------------------------------------------------------------------------------"
 
 " --- Key Mapping Setting-------------------------------------------------------------------"
+map <F1> :NERDTreeTabsToggle<CR>
 map <F2> :set nonumber!<CR>
 map <F3> :set hlsearch!<CR>
 nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
-map <F6> :NERDTreeTabsToggle<CR>
 
 nnoremap <CR> o<Esc>
 " ------------------------------------------------------------------------------------------"
