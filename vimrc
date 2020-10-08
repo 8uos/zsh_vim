@@ -50,6 +50,8 @@ set background=dark
 " NERDTree auto open
 let g:nerdtree_tabs_open_on_gui_startup=1     " Open NERDTREE on gvim/macvim startup
 let g:nerdtree_tabs_open_on_console_startup=1 " Open NERDTree on console vim startup
+let g:NERDTreeDirArrowExpandable = '>'
+let g:NERDTreeDirArrowCollapsible = 'v'
 " ------------------------------------------------------------------------------------------"
 
 " --- NERDTree Git Setting ----------------------------------------------------------------"
