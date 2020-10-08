@@ -89,7 +89,7 @@ map <F2> :set nonumber!<CR>
 map <F3> :set hlsearch!<CR>
 nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
-let mapleader=","
+let mapleader="'"
 nnoremap <CR> o<Esc>
 nnoremap <Leader><CR> O<ESC>
 " ------------------------------------------------------------------------------------------"
