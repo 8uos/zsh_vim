@@ -97,7 +97,6 @@ nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :noh
 map <F6> :NERDTreeTabsToggle<CR>
 
 nnoremap <CR> o<Esc>
-nnoremap <leader><CR> O<Esc>
 " ------------------------------------------------------------------------------------------"
 
 set autoindent
