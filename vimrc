@@ -41,10 +41,7 @@ syntax on
 " [End] Setting from https://github.com/VundleVim/Vundle.vim
 
 " colorscheme solarized
-set background=dark
-" colorscheme Tomorrow-Night
-" colorscheme minimalist
-" colorscheme PaperColor
+" set background=dark
 
 " --- NERDTree Tabs Setting ----------------------------------------------------------------"
 " NERDTree auto open
