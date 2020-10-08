@@ -106,5 +106,6 @@ source $ZSH/oh-my-zsh.sh
 
 export TMOUT=0
 
+export LANG=en_US
 export PATH=/usr/local/cuda/bin:${PATH}
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH}
