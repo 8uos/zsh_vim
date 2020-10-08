@@ -54,7 +54,9 @@ let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'v'
 " ------------------------------------------------------------------------------------------"
 
+" --- NERDCommenter Setting ----------------------------------------------------------------"
 let g:NERDSpaceDelims = 1
+" ------------------------------------------------------------------------------------------"
 
 " --- NERDTree Git Setting ----------------------------------------------------------------"
 let g:NERDTreeGitStatusIndicatorMapCustom = {
