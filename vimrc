@@ -95,6 +95,9 @@ map <F2> :set nonumber!<CR>
 map <F3> :set hlsearch!<CR>
 nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 map <F6> :NERDTreeTabsToggle<CR>
+
+nnoremap <CR> o<Esc>
+nnoremap <leader><CR> O<Esc>
 " ------------------------------------------------------------------------------------------"
 
 set autoindent
@@ -125,5 +128,3 @@ set completeopt-=preview
 ca tn tabnew
 command! W w " use :W as save
 command! Q q " use :Q as quit
-
-nnoremap <CR> o<ESC>
