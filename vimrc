@@ -72,15 +72,6 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
       \ }
 " ------------------------------------------------------------------------------------------"
 
-" --- TagList Setting-----------------------------------------------------------------------"
-"let Tlist_Use_Right_Window=1
-"let Tlist_Auto_Open=1
-"let Tlist_Enable_Fold_Column=0
-"let Tlist_Compact_Format=0
-"let Tlist_File_Fold_Auto_Close = 1
-"nmap <LocalLeader>tt :Tlist<cr>
-" ------------------------------------------------------------------------------------------"
-
 " -----python-mode Setting----------------------------------------------------------------- "
 set foldlevel=99
 let g:pymode_options_colorcolumn = 0
@@ -98,7 +89,9 @@ map <F2> :set nonumber!<CR>
 map <F3> :set hlsearch!<CR>
 nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
+let mapleader=","
 nnoremap <CR> o<Esc>
+nnoremap <Leader><CR> O<ESC>
 " ------------------------------------------------------------------------------------------"
 
 set autoindent
