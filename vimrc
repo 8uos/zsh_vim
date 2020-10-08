@@ -54,6 +54,8 @@ let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'v'
 " ------------------------------------------------------------------------------------------"
 
+let g:NERDSpaceDelims = 1
+
 " --- NERDTree Git Setting ----------------------------------------------------------------"
 let g:NERDTreeGitStatusIndicatorMapCustom = {
       \ "Modified"  : "~",
@@ -122,3 +124,6 @@ set completeopt-=preview
 " use :tn as shortcut of :tabnew
 ca tn tabnew
 command! W w " use :W as save
+command! Q q " use :Q as quit
+
+nnoremap <CR> o<ESC>
