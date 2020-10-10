@@ -13,23 +13,25 @@ RUN apt-get install -y zsh vim \
 && git clone https://github.com/8uos/zsh_vim.git /zsh_vim \
 && bash /zsh_vim/vim_config.sh \
 && bash /zsh_vim/zsh_config.sh \
+&& chsh -s `which zsh` \
+&& echo $SHELL \
 && rm -r /zsh_vim
 
 # Install Miniconda
 RUN curl -so /miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
 && chmod +x /miniconda.sh \
-&& /miniconda.sh -b -p /miniconda \
+&& /miniconda.sh -b -p /conda \
 && rm /miniconda.sh
 
-ENV PATH=/miniconda/bin:$PATH
+ENV PATH=/conda/bin:$PATH
 
 # Create a Python 3.8 environment
-RUN /miniconda/bin/conda install -y conda-build \
-&& /miniconda/bin/conda create -y --name py38 python=3.8 \
-&& /miniconda/bin/conda clean -ya
+RUN conda install -y conda-build \
+&& conda create -y --name py38 python=3.8 \
+&& conda clean -ya
 
 ENV CONDA_DEFAULT_ENV=py38
-ENV CONDA_PREFIX=/miniconda/envs/$CONDA_DEFAULT_ENV
+ENV CONDA_PREFIX=/conda/envs/$CONDA_DEFAULT_ENV
 ENV PATH=$CONDA_PREFIX/bin:$PATH
 ENV CONDA_AUTO_UPDATE_CONDA=false
 ENV NVIDIA_DRIVER_CAPABILITIES compute,video,utility
@@ -53,5 +55,5 @@ ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 ENV LANGUAGE=C.UTF-8
 
-WORKDIR /home
-RUN chmod -R a+w /home
+WORKDIR /workspace
+RUN chmod -R a+w /workspace
