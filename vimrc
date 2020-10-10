@@ -40,8 +40,8 @@ syntax on
 " Put your non-Plugin stuff after this line
 " [End] Setting from https://github.com/VundleVim/Vundle.vim
 
-" colorscheme solarized
-" set background=dark
+colorscheme seashell
+set background=dark
 
 " --- NERDTree Tabs Setting ----------------------------------------------------------------"
 " NERDTree auto open
