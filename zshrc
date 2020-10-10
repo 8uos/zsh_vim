@@ -105,12 +105,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export TMOUT=0
-
 export LANG=en_US
-export PATH=/usr/local/cuda/bin:${PATH}
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH}
 
 export CONDA_ROOT=/conda
-export CONDA_DEFAULT_ENV=py38
-export CONDA_PREFIX=$CONDA_ROOT/envs/$CONDA_DEFAULT_ENV
-export PATH=$CONDA_PREFIX/bin:$CONTA_ROOT/bin:$PATH
+
+export PATH=${PATH}:${CONDA_ROOT}/bin:/usr/local/cuda/bin
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH}

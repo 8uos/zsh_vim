@@ -21,7 +21,7 @@ Plugin 'klen/python-mode' " python-mode
 Plugin 'davidhalter/jedi-vim' " jedi-vim
 Plugin 'airblade/vim-gitgutter' " vim-gitgutter, shows a git diff
 Plugin 'Xuyuanp/nerdtree-git-plugin' " nerdtree-git, git plugin for nerdtree
-Plugin 'flazz/vim-colorschemes'
+" Plugin 'flazz/vim-colorschemes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -40,8 +40,8 @@ syntax on
 " Put your non-Plugin stuff after this line
 " [End] Setting from https://github.com/VundleVim/Vundle.vim
 
-colorscheme seashell
-set background=dark
+colorscheme default
+" set background=dark
 
 " --- NERDTree Tabs Setting ----------------------------------------------------------------"
 " NERDTree auto open
