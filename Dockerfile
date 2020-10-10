@@ -18,12 +18,13 @@ RUN apt-get install -y zsh vim \
 && rm -r /zsh_vim
 
 # Install Miniconda
+ENV CONDA_ROOT=/conda
 RUN curl -so /miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
 && chmod +x /miniconda.sh \
-&& /miniconda.sh -b -p /conda \
+&& /miniconda.sh -b -p $CONDA_ROOT \
 && rm /miniconda.sh
 
-ENV PATH=/conda/bin:$PATH
+ENV PATH=$CONTA_ROOT/bin:$PATH
 
 # Create a Python 3.8 environment
 RUN conda install -y conda-build \
@@ -31,7 +32,7 @@ RUN conda install -y conda-build \
 && conda clean -ya
 
 ENV CONDA_DEFAULT_ENV=py38
-ENV CONDA_PREFIX=/conda/envs/$CONDA_DEFAULT_ENV
+ENV CONDA_PREFIX=$CONDA_ROOT/envs/$CONDA_DEFAULT_ENV
 ENV PATH=$CONDA_PREFIX/bin:$PATH
 ENV CONDA_AUTO_UPDATE_CONDA=false
 ENV NVIDIA_DRIVER_CAPABILITIES compute,video,utility
