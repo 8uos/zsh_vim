@@ -40,7 +40,7 @@ ENV NVIDIA_DRIVER_CAPABILITIES compute,video,utility
 ENV TERM xterm-256color
 
 RUN conda update -n base -c defaults conda
-RUN conda install -y ipython numpy pandas matplotlib tqdm pyyaml scipy cython jupyterlab
+RUN conda install -y ipython jupyter numpy pandas matplotlib tqdm pyyaml scipy cython jupyterlab
 RUN pip install psutil requests ninja yacs opencv-python sklearn scikit-image fire lmdb sconf
 RUN pip install ffmpeg imageio-ffmpeg easydict
 
