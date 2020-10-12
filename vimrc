@@ -41,7 +41,6 @@ syntax on
 " [End] Setting from https://github.com/VundleVim/Vundle.vim
 
 colorscheme peachpuff
-" set background=dark
 
 " --- NERDTree Tabs Setting ----------------------------------------------------------------"
 " NERDTree auto open
@@ -122,3 +121,4 @@ command! W w " use :W as save
 command! Q q " use :Q as quit
 
 hi Search ctermfg=Black
+hi Visual ctermbg=Black ctermfg=None cterm=reverse
