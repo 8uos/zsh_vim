@@ -122,3 +122,4 @@ command! Q q " use :Q as quit
 
 hi Search ctermfg=Black
 hi Visual ctermbg=Black ctermfg=None cterm=reverse
+hi Pmenu ctermbg=Black ctermfg=None
