@@ -14,7 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " personal setting for plugins 
 Plugin 'kien/ctrlp.vim' " ctrlp, easy file finder
-Plugin 'scrooloose/nerdcommenter' " nerdcommenter, easy comment/decomment
+plugin 'scrooloose/nerdcommenter' " nerdcommenter, easy comment/decomment
 Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }  " nerdtree, explore filesystem for vim
 Plugin 'jistr/vim-nerdtree-tabs' " nerdtree-tabs, NERDTree and tabs together in Vim, painlessly
 Plugin 'klen/python-mode' " python-mode
@@ -78,6 +78,7 @@ let g:pymode_lint_ignore = ["E501", "E402", "C901"]
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 0
 let g:jedi#use_splits_not_buffers = 'top'
+let g:jedi#completions_command = "<Tab><Space>"
 " ------------------------------------------------------------------------------------------"
 
 " --- Key Mapping Setting-------------------------------------------------------------------"
