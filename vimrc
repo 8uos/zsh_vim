@@ -40,8 +40,7 @@ syntax on
 " Put your non-Plugin stuff after this line
 " [End] Setting from https://github.com/VundleVim/Vundle.vim
 
-colorscheme default
-" set background=dark
+colorscheme peachpuff
 
 " --- NERDTree Tabs Setting ----------------------------------------------------------------"
 " NERDTree auto open
@@ -120,3 +119,6 @@ set completeopt-=preview
 ca tn tabnew
 command! W w " use :W as save
 command! Q q " use :Q as quit
+
+hi Search ctermfg=Black
+hi Visual ctermbg=Black ctermfg=None cterm=reverse
