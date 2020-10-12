@@ -13,8 +13,6 @@ RUN apt-get install -y zsh vim \
 && git clone https://github.com/8uos/zsh_vim.git /zsh_vim \
 && bash /zsh_vim/vim_config.sh \
 && bash /zsh_vim/zsh_config.sh \
-&& chsh -s `which zsh` \
-&& echo $SHELL \
 && rm -r /zsh_vim
 
 # Install Miniconda
@@ -24,35 +22,18 @@ RUN curl -so /miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest
 && /miniconda.sh -b -p $CONDA_ROOT \
 && rm /miniconda.sh
 
-ENV PATH=$CONTA_ROOT/bin:$PATH
+ENV PATH=$CONDA_ROOT/bin:$PATH
 
-# Create a Python 3.8 environment
-RUN conda install -y conda-build \
-&& conda create -y --name py38 python=3.8 \
-&& conda clean -ya
-
-ENV CONDA_DEFAULT_ENV=py38
-ENV CONDA_PREFIX=$CONDA_ROOT/envs/$CONDA_DEFAULT_ENV
-ENV PATH=$CONDA_PREFIX/bin:$PATH
-ENV CONDA_AUTO_UPDATE_CONDA=false
-ENV NVIDIA_DRIVER_CAPABILITIES compute,video,utility
-# Dab adding for color enviroment
-ENV TERM xterm-256color
-
-RUN conda update -n base -c defaults conda
-RUN conda install -y ipython jupyter numpy pandas matplotlib tqdm pyyaml scipy cython jupyterlab
+RUN pip install ipython jupyter numpy pandas matplotlib tqdm pyyaml scipy cython jupyterlab
 RUN pip install psutil requests ninja yacs opencv-python sklearn scikit-image fire lmdb sconf
 RUN pip install ffmpeg imageio-ffmpeg easydict
 
 # Install PyTorch
-RUN conda install pytorch torchvision cudatoolkit=10.0 -c pytorch \
-&& conda clean -ya
+RUN conda install pytorch torchvision cudatoolkit=10.0 -c pytorch
 # Downgrade pillow for torchvision
 RUN pip install Pillow==6.1.0
 
-ENV PYTHONPATH=/workspace
 ENV LC_ALL=C.UTF-8
-# Dab adding
 ENV LANG=C.UTF-8
 ENV LANGUAGE=C.UTF-8
 

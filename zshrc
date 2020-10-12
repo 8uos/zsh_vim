@@ -108,8 +108,6 @@ export TMOUT=0
 export LANG=en_US
 
 export CONDA_ROOT=/conda
-export CONDA_DEFAULT_ENV=py38
-export CONDA_PREFIX=${CONDA_ROOT}/envs/${CONDA_DEFAULT_ENV}
 
-export PATH=${PATH}:${CONDA_ROOT}/bin:${CONDA_PREFIX}/bin:/usr/local/cuda/bin
+export PATH=${PATH}:${CONDA_ROOT}/bin:/usr/local/cuda/bin
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH}
