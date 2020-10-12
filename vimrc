@@ -40,7 +40,7 @@ syntax on
 " Put your non-Plugin stuff after this line
 " [End] Setting from https://github.com/VundleVim/Vundle.vim
 
-colorscheme default
+colorscheme elflord
 " set background=dark
 
 " --- NERDTree Tabs Setting ----------------------------------------------------------------"
