@@ -14,7 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " personal setting for plugins 
 Plugin 'kien/ctrlp.vim' " ctrlp, easy file finder
-plugin 'scrooloose/nerdcommenter' " nerdcommenter, easy comment/decomment
+Plugin 'scrooloose/nerdcommenter' " nerdcommenter, easy comment/decomment
 Plugin 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }  " nerdtree, explore filesystem for vim
 Plugin 'jistr/vim-nerdtree-tabs' " nerdtree-tabs, NERDTree and tabs together in Vim, painlessly
 Plugin 'klen/python-mode' " python-mode
