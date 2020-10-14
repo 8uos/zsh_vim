@@ -82,8 +82,9 @@ let g:jedi#completions_command = "<Tab><Space>"
 
 " --- Key Mapping Setting-------------------------------------------------------------------"
 map <F1> :NERDTreeTabsToggle<CR>
-map <F2> :set nonumber!<CR>
-map <F3> :set hlsearch!<CR>
+map <F2> :set paste!<CR>
+map <F3> :set nonumber!<CR>
+map <F4> :set hlsearch!<CR>
 nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 let mapleader="'"
