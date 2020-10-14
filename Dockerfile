@@ -11,9 +11,9 @@ RUN apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender1 libfontconfig1 i
 # setting for zsh and vim (sanghyuk.c)
 RUN apt-get install -y zsh vim \
 && git clone https://github.com/8uos/zsh_vim.git /zsh_vim \
+&& bash /zsh_vim/tmux_config.sh \
 && bash /zsh_vim/vim_config.sh \
-&& bash /zsh_vim/zsh_config.sh \
-&& rm -r /zsh_vim
+&& bash /zsh_vim/zsh_config.sh
 
 # Install Miniconda
 ENV CONDA_ROOT=/conda
@@ -39,3 +39,7 @@ ENV LANGUAGE=C.UTF-8
 
 WORKDIR /workspace
 RUN chmod -R a+w /workspace
+
+RUN ipython profile create \
+&& cp -f /zsh_vim/ipython_config.py ~/.ipython_config.py \
+&& rm -r /zsh_vim
