@@ -109,7 +109,6 @@ set showmatch " show matched brackets
 set hlsearch " highlighted searched results
 set smartcase " sensitive case search
 set clipboard=unnamed " setting for MAC. for iterm2, enable Use modern parser (experimental) in preference > profile > terminal
-set paste "paste mode on"
 
 set mouse=a " enable vim automatic visual mode using mouse " press shift for disable (e.g. for copy & paste)
 
