@@ -21,6 +21,7 @@ Plugin 'klen/python-mode' " python-mode
 Plugin 'davidhalter/jedi-vim' " jedi-vim
 Plugin 'airblade/vim-gitgutter' " vim-gitgutter, shows a git diff
 Plugin 'Xuyuanp/nerdtree-git-plugin' " nerdtree-git, git plugin for nerdtree
+Plugin 'jeetsukumaran/vim-buffergator' "buffergator
 " Plugin 'flazz/vim-colorschemes'
 
 " All of your Plugins must be added before the following line
@@ -40,6 +41,7 @@ syntax on
 " Put your non-Plugin stuff after this line
 " [End] Setting from https://github.com/VundleVim/Vundle.vim
 
+let mapleader="'"
 colorscheme peachpuff
 
 " --- NERDTree Tabs Setting ----------------------------------------------------------------"
@@ -53,6 +55,14 @@ ca tf NERDTreeTabsFind
 
 " --- NERDCommenter Setting ----------------------------------------------------------------"
 let g:NERDSpaceDelims = 1
+" ------------------------------------------------------------------------------------------"
+
+" --- CtrlP Setting ----------------------------------------------------------------"
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'file': '\v\.(so|dll|class|png|jpg|jpeg)$',
+\}
 " ------------------------------------------------------------------------------------------"
 
 " --- NERDTree Git Setting ----------------------------------------------------------------"
@@ -82,15 +92,16 @@ let g:jedi#completions_command = "<Tab><Space>"
 " ------------------------------------------------------------------------------------------"
 
 " --- Key Mapping Setting-------------------------------------------------------------------"
-map <F1> :NERDTreeTabsToggle<CR>
-map <F2> :set paste!<CR>
+
+map <F1> :BuffergatorToggle<CR>
+map <F2> :NERDTreeTabsToggle<CR>
 map <F3> :set nonumber!<CR>
 map <F4> :set hlsearch!<CR>
 nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
-let mapleader="'"
 nnoremap <CR> o<Esc>
 nnoremap <Leader><CR> O<ESC>
+map <Leader>pp :set paste!<CR>
 " ------------------------------------------------------------------------------------------"
 
 set autoindent
