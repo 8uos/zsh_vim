@@ -46,8 +46,8 @@ colorscheme peachpuff
 
 " --- NERDTree Tabs Setting ----------------------------------------------------------------"
 " NERDTree auto open
-let g:nerdtree_tabs_open_on_gui_startup=1     " Open NERDTREE on gvim/macvim startup
-let g:nerdtree_tabs_open_on_console_startup=1 " Open NERDTree on console vim startup
+let g:nerdtree_tabs_open_on_gui_startup=0     " Open NERDTREE on gvim/macvim startup
+let g:nerdtree_tabs_open_on_console_startup=0 " Open NERDTree on console vim startup
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'v'
 ca tf NERDTreeTabsFind
