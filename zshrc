@@ -106,8 +106,14 @@ source $ZSH/oh-my-zsh.sh
 
 export TMOUT=0
 export LANG=en_US
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 export CONDA_ROOT=/conda
 
-export PATH=${PATH}:${CONDA_ROOT}/bin:/usr/local/cuda/bin
+export PATH=${PATH}:${CONDA_ROOT}/bin:/usr/local/cuda/bin:/workspace/NSML
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH}
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+cd /workspace
