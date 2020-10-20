@@ -24,7 +24,7 @@ RUN curl -so /miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest
 
 ENV PATH=$CONDA_ROOT/bin:$PATH
 
-RUN pip install ipython jupyter numpy pandas matplotlib tqdm pyyaml scipy cython jupyterlab
+RUN conda install ipython jupyter numpy pandas matplotlib tqdm pyyaml scipy cython jupyterlab nodejs
 RUN pip install psutil requests ninja yacs opencv-python sklearn scikit-image fire lmdb sconf
 RUN pip install ffmpeg imageio-ffmpeg easydict
 
@@ -41,5 +41,6 @@ WORKDIR /workspace
 RUN chmod -R a+w /workspace
 
 RUN ipython profile create \
-&& cp -f /zsh_vim/ipython_config.py ~/.ipython_config.py \
-&& rm -r /zsh_vim
+&& cp -f /zsh_vim/ipython_config.py ~/.ipython/profile_default/ipython_config.py \
+&& rm -r /zsh_vim \
+&& chsh -s '/bin/zsh'
