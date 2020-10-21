@@ -50,7 +50,8 @@ let g:nerdtree_tabs_open_on_gui_startup=0     " Open NERDTREE on gvim/macvim sta
 let g:nerdtree_tabs_open_on_console_startup=0 " Open NERDTree on console vim startup
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'v'
-ca tf NERDTreeTabsFind
+ca nt NERDTree
+ca ntf NERDTreeTabsFind
 " ------------------------------------------------------------------------------------------"
 
 " --- NERDCommenter Setting ----------------------------------------------------------------"
