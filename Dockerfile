@@ -5,7 +5,7 @@ FROM nvidia/cuda:${CUDA}-cudnn${CUDNN}-devel-ubuntu18.04
 
 # install basics
 RUN apt-get update -y && apt-get install -y --no-install-recommends language-pack-en 
-RUN apt-get install -y apt-utils git ssh tmux curl ca-certificates bzip2 cmake tree htop bmon iotop g++ 
+RUN apt-get install -y apt-utils rename git ssh tmux curl ca-certificates bzip2 cmake tree htop bmon iotop g++ 
 RUN apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender1 libfontconfig1 iputils-ping 
 
 # setting for zsh and vim (sanghyuk.c)
