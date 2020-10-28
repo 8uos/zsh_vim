@@ -1,5 +1,5 @@
 ARG CUDNN="7"
-ARG CUDA="10.0"
+ARG CUDA="10.1"
 
 FROM nvidia/cuda:${CUDA}-cudnn${CUDNN}-devel-ubuntu18.04
 
@@ -29,7 +29,7 @@ RUN pip install psutil requests ninja yacs opencv-python sklearn scikit-image fi
 RUN pip install ffmpeg imageio-ffmpeg easydict
 
 # Install PyTorch
-RUN conda install pytorch torchvision cudatoolkit=10.0 -c pytorch
+RUN conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
 # Downgrade pillow for torchvision
 RUN pip install Pillow==6.1.0
 
