@@ -24,12 +24,12 @@ RUN curl -so /miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest
 
 ENV PATH=$CONDA_ROOT/bin:$PATH
 
-RUN conda install ipython jupyter numpy pandas matplotlib tqdm pyyaml scipy cython jupyterlab nodejs
+RUN pip install ipython jupyter numpy pandas matplotlib tqdm pyyaml scipy cython jupyterlab nodejs
 RUN pip install psutil requests ninja yacs opencv-python sklearn scikit-image fire lmdb sconf
 RUN pip install ffmpeg imageio-ffmpeg easydict
 
 # Install PyTorch
-RUN conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
+RUN conda install pytorch==1.4 torchvision==0.5.0 cudatoolkit=10.1 -c pytorch
 # Downgrade pillow for torchvision
 RUN pip install Pillow==6.1.0
 

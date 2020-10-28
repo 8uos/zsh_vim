@@ -1,9 +1,11 @@
 #!/bin/bash
-if [ "$#" -ne 1 ]; then
-    flag='local'
-else
-    flag='global'
-fi
+# if [ "$#" -ne 1 ]; then
+    # flag='local'
+# else
+    # flag='global'
+# fi
+
+flag='global'
 
 git config --$flag user.name 8uos
 git config --$flag user.email "song.pxxk@gmail.com"
