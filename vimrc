@@ -88,7 +88,8 @@ let g:pymode_lint_ignore = ["E501", "E402", "C901"]
 
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 0
-let g:jedi#use_splits_not_buffers = 'top'
+let g:jedi#use_splits_not_buffers = 'right'
+let g:jedi#show_call_signatures = "2"
 let g:jedi#completions_command = "<Tab><Space>"
 " ------------------------------------------------------------------------------------------"
 
@@ -128,6 +129,7 @@ set mouse=a " enable vim automatic visual mode using mouse " press shift for dis
 set wildmenu
 set wildignore=*.bak,*.o,*.e,*~
 set completeopt-=preview
+set noshowmode
 
 " use :tn as shortcut of :tabnew
 ca tn tabnew
