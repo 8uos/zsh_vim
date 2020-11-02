@@ -133,7 +133,7 @@ set statusline+=%R
 set statusline+=%M             
 set statusline+=%#Cursor#      
 set statusline+=%#CursorLine#  
-set statusline+=\ %t\          
+set statusline+=\ %f\          
 set statusline+=%=             
 set statusline+=%#CursorLine#  
 set statusline+=\ %Y\          
