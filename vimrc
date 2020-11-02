@@ -64,6 +64,10 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
   \ 'file': '\v\.(so|dll|class|png|jpg|jpeg)$',
 \}
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-v>', '<RightMouse>'],
+    \ 'AcceptSelection("v")': ['<cr>', '<2-LeftMouse>'],
+    \ }
 " ------------------------------------------------------------------------------------------"
 
 " --- NERDTree Git Setting ----------------------------------------------------------------"
@@ -125,6 +129,7 @@ set smartcase " sensitive case search
 set clipboard=unnamed " setting for MAC. for iterm2, enable Use modern parser (experimental) in preference > profile > terminal
 
 set mouse=a " enable vim automatic visual mode using mouse " press shift for disable (e.g. for copy & paste)
+set splitright
 
 set wildmenu
 set wildignore=*.bak,*.o,*.e,*~
