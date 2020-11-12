@@ -22,6 +22,7 @@ Plugin 'davidhalter/jedi-vim' " jedi-vim
 Plugin 'airblade/vim-gitgutter' " vim-gitgutter, shows a git diff
 Plugin 'Xuyuanp/nerdtree-git-plugin' " nerdtree-git, git plugin for nerdtree
 Plugin 'jeetsukumaran/vim-buffergator' "buffergator
+Plugin 'mkitt/tabline.vim' "vimline
 " Plugin 'flazz/vim-colorschemes'
 
 " All of your Plugins must be added before the following line
@@ -50,13 +51,13 @@ let g:nerdtree_tabs_open_on_gui_startup=0     " Open NERDTREE on gvim/macvim sta
 let g:nerdtree_tabs_open_on_console_startup=0 " Open NERDTree on console vim startup
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'v'
-let g:NERDTreeCustomOpenArgs = {
-            \ 'file': {
-            \ 'where': 'v',
-            \ 'reuse': 'all',
-            \ },
-            \ 'dir': {}
-            \}
+" let g:NERDTreeCustomOpenArgs = {
+            " \ 'file': {
+            " \ 'where': 'v',
+            " \ 'reuse': 'all',
+            " \ },
+            " \ 'dir': {}
+            " \}
 ca nt NERDTree
 ca ntf NERDTreeTabsFind
 " ------------------------------------------------------------------------------------------"
@@ -71,10 +72,6 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
   \ 'file': '\v\.(so|dll|class|png|jpg|jpeg)$',
 \}
-let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<c-v>', '<RightMouse>'],
-    \ 'AcceptSelection("v")': ['<cr>', '<2-LeftMouse>'],
-    \ }
 " ------------------------------------------------------------------------------------------"
 
 " --- NERDTree Git Setting ----------------------------------------------------------------"
