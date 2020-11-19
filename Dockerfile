@@ -26,7 +26,7 @@ ENV PATH=$CONDA_ROOT/bin:$PATH
 
 RUN pip install ipython jupyter numpy pandas matplotlib tqdm pyyaml scipy cython jupyterlab nodejs
 RUN pip install psutil requests ninja yacs opencv-python sklearn scikit-image fire lmdb sconf
-RUN pip install ffmpeg imageio-ffmpeg easydict
+RUN pip install ffmpeg imageio-ffmpeg easydict google-api-python-client oauth2client "six>=1.13.0"
 
 # Install PyTorch
 RUN conda install pytorch==1.4 torchvision==0.5.0 cudatoolkit=10.1 -c pytorch
