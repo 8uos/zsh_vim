@@ -115,3 +115,4 @@ export PATH=${PATH}:${CONDA_ROOT}/bin:/usr/local/cuda/bin
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH}
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias cl=clear
